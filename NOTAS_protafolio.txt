@@ -1,2 +1,21 @@
 PARA CREAR UN COMPONENTE DESDE LA LINEA DE COMANDOS ES CON EL COMANDO ng g c shared/header --spec=false LA OPCIÓN g ES PARA generate, LA c ES PARA component, shared ES LA 
 CARPETA, SI ESTA NO EXISTE SERÁ CREADA, header ES EL NOMBRE DEL COMPONENTE Y --spec=false ES PARA QUE NO GENERE LOS ARCHIVOS PARA PRUEBAS UNITARIAS.
+
+******************************************
+************   SECCION 3   ***************
+******************************************
+EL ARCHIVO app-routing.module.ts ES EL ENCARGADO DE LA CREACION DE LAS RUTAS. USAR ESTE ARCHIVO PARA LAS RUTAS ES LA MANERA RECOMENDADA POR ANGULAR YA QUE ASÍ LA APLICACIÓN ES
+MÁS FACIL DE MANTENER.
+
+******************************************
+************   SECCION 4   ***************
+******************************************
+UN SERVICIO EN ANGULAR SE USA PARA COMPARTIR INFORMACIÓN GLOBAL A LO LARGO DE TODA LA APLICACIÓN, TAMBIEN SE USA PARA MANEJAR CIERTA LOGICA EN ALGÚN LUGAR ESPECIFICO DE LA PÁ
+GINA.
+PARA GENERAR UN SERVICIO SE USA EL COMANDO ng g s [ruta]/nombre_servicio skipTests.
+LOS SERVICIOS SE COLOCAN EN LA PARTE DE LOS providers DEL ARCHIVO app.modules.ts, PERO ESTO NO BASTA, PARA PODER USARLO SE DEBE PONER EN EL ARCHIVO app.component.ts
+
+******************************************
+************   SECCION 5   ***************
+******************************************
+--- CREAR DB EN FIREBASE ---

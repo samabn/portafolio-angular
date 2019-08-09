@@ -6,6 +6,10 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BodyComponent } from './shared/body/body.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ProductComponent } from './pages/product/product.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,10 +17,15 @@ import { PortafolioComponent } from './pages/portafolio/portafolio.component';
     HeaderComponent,
     FooterComponent,
     BodyComponent,
-    PortafolioComponent
+    PortafolioComponent,
+    AboutComponent,
+    ProductComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule //ESTE MODULO ES PARA HACER PETICIONES http (put, get, delete, etc.) A SERVIDORES REST.
+
   ],
   providers: [],
   bootstrap: [AppComponent]
