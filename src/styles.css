@@ -31,6 +31,15 @@
     animation-name: fadeIn;
 }
 
+/* SVG ANIMATION */
+.svg-animation {
+  text-align: center;
+}
+
+svg path, svg rect{
+  fill: black;
+}
+
 @media (print), (prefers-reduced-motion: reduce) {
     .animated {
       -webkit-animation-duration: 1ms !important;
