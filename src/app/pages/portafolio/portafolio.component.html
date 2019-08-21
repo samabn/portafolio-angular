@@ -19,9 +19,13 @@
             </path>
         </svg>
     </div>
-</div>
+    </div>
     <div *ngIf='!productsservice.loading' class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
-        <a *ngFor="let product of productsservice.products" routerLink="/product" class="rk-item ae-masonry__item">
+        <a *ngFor="let product of productsservice.products" 
+            routerLink="/product/{{ product.cod }}" 
+            class="rk-item ae-masonry__item"><!-- routerLink="/product/{{ product.cod }}" ESTA ES UNA MANERA EN LA QUE PODEMOS MANDAR PARÁMETROS DE MANERA DINAMICA
+                                                     [routerLink]="['/product', product.cod]" Y ESTA OTRA, EN ESTA ESTAMOS MADANDO UN ARREGLO QUE SE COMPONE DE LAS PARTES
+                                                     QUE FORMAN A LA URL-->
             <!-- <img [src]="product[0].url" alt=""> -->
             <img src="assets/img/{{ product.url }}.jpg" alt="">
             <div class="item-meta">
