@@ -20,7 +20,6 @@ export class ProductosService {
     /* PROMESAS DE ES 6, ESTAS SON ASINCRONAS */
     return new Promise((resolve, reject) => {
       this.http.get('https://portafolio-angular-b3505.firebaseio.com/productos_idx.json').subscribe((resp: ProductosInterface[]) => {
-        console.log(resp);
         this.products = resp;
         this.loading = false;
         resolve(); // CUANDO SE SEJECUTA ESTE MÉTODO ES PORQUE LA PROMESA TERMINO DE MANERA CORRECTA
@@ -45,7 +44,6 @@ export class ProductosService {
   }
 
   private filterProducts(termino: string) {
-    console.log(this.products);
     this.productfiltrado = []; // ESTO ES PARA PURGAR EL ARREGLO, BORRAR LOS ELEMENTOS QUE ESTE PUEDA TENER DE UNA BUSQUEDA ANTERIOR
     /* EL MÉTODO filter BARRE EL ARREGLO Y REGRESA UNO NUEVO */
     /*this.productfiltrado = this.products.filter(product => {
